@@ -1,0 +1,96 @@
+<div class="register">
+    <h3 align="center">Add SubCategory</h3>
+    <div class="form-row">
+        <form [formGroup]="subcategoryForm" align="center">
+            <table>
+              <!-- <tr>
+                    <td><label>SubCategory ID</label></td>
+                    <td><input type="text" formControlName="subid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subid.errors }" />
+                    <div *ngIf="submitted && f.subid.errors" class="invalid-feedback">
+                        <div *ngIf="f.subid.errors.required"></div>
+                        <div *ngIf="f.subid.errors.pattern"></div>
+                    </div></td>
+                </tr> -->
+                 <tr>
+                    <td><label>Category Name</label></td>
+                    <td><input type="text" formControlName="cname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cname.errors }" />
+                    <div *ngIf="submitted && f.cname.errors" class="invalid-feedback">
+                        <div *ngIf="f.cname.errors.required"></div>
+                    </div></td>
+                </tr> 
+                <tr>
+                    <td><label>SubCategory Name</label></td>
+                    <td><input type="text" formControlName="subname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subname.errors }" />
+                    <div *ngIf="submitted && f.subname.errors" class="invalid-feedback">
+                        <div *ngIf="f.subname.errors.required"></div>
+                        <div *ngIf="f.subname.errors.pattern"></div>
+                    </div></td>
+                </tr>
+               
+                    <tr><td><label>SubCategory Details</label></td>
+                <td><input type="text" formControlName="sdetails" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sdetails.errors }" />
+                <div *ngIf="submitted && f.sdetails.errors" class="invalid-feedback">
+                    <div *ngIf="f.sdetails.errors.required"></div>
+                </div></td>
+            </tr>
+            <tr>
+                <td><label>GST</label></td>
+                <td><input type="text" formControlName="gst" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.gst.errors }" />
+                <div *ngIf="submitted && f.gst.errors" class="invalid-feedback">
+                    <div *ngIf="f.gst.errors.required"></div>
+                </div></td>
+            </tr>
+            <br>
+            <br>
+                <div class="text-center">
+                <button class="btn btn-primary mr-1" type="submit" (click)="onSubmitAdd()">Add</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="SubCategory()">
+                    Delete
+                   </button>&nbsp;
+                <!-- <button class="btn btn-primary mr-1" type="reset" (click)="onReset()">Reset</button> -->
+            </div>
+        </table>
+        </form>
+</div>
+</div>
+<br>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="width:120%;">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">List of Categories</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             <table class="table table-striped">
+               <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>CategoryName </th>
+                    <th>Details</th>
+                    <th>GST</th>
+                    <th>Delete</th>
+                  </tr>
+             </thead>
+             <tbody>
+                <tr *ngFor="let subcategory of list">
+                    <td>{{subcategory.subid}}</td>
+                    <td>{{subcategory.subname}}</td>
+                    <td>{{subcategory.cname}}</td>
+                    <td>{{subcategory.sdetails}}</td>
+                    <td>{{subcategory.gst}}</td>
+                 <td><button type="button" class="btn btn-danger" (click)="Delete(subcategory.subid)">Delete</button></td>
+                </tr>
+             </tbody>
+             </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>

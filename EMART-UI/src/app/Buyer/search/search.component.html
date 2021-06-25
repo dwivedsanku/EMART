@@ -1,0 +1,23 @@
+  <form [formGroup]="itemform">
+    <input type="search" formControlName="itemname" placeholder="Search" aria-label="Search">
+    <button type="button" class="btn btn-light" (click)="Search()">Search</button>
+</form>
+<div class="container">
+<div class="row" >
+  <div class="col-md-3" *ngFor="let item of list">
+  <div class="card" style="width:250px">
+    <img class="img" src="assets/images/{{item.imagename}}" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">{{item.description}}</h4>
+      <h5 class="card-text">ID:{{item.id}}
+         Price:{{item.price}} </h5>
+      <button type="button" (click)="Buy(item)" class="btn btn-primary" >BuyItem</button>
+ 
+      <button type="button" (click)="AddtoCart(item)" class="btn btn-primary">AddToCart</button>
+     
+    <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+    </div>
+  </div>
+</div>
+  </div>
+ </div>

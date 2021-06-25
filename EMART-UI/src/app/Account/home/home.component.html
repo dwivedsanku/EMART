@@ -1,0 +1,53 @@
+<div class="bg-image">
+<nav><div class="topnav">
+  <a><span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;HOME</span></a>
+  <a routerLink="/HOME">EMART</a>
+</div></nav>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a routerLink="/HOME"><i class="fa fa-fw fa-home"></i> EMART LOGIN</a>
+  <a routerLink="/CONTACT"><i class="fa fa-fw fa-envelope"></i>CONTACT</a>
+</div>
+<div class="login" align="center">
+<h3 align="center">LOGIN</h3>
+<div class="jumborton">
+    <div class="container">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmitLogin()" align="center">
+        <div class="form-group">
+            <label>UserName</label>
+            <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">User Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password"formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+            </div>
+        </div>
+        <div>
+          Buyer <input type="radio" formControlName="role"  value="buyer" name="role" />
+          Seller <input type="radio" formControlName="role"  value="seller" name="role" />
+       </div>
+        <div class="text-center">
+            <button type="submit" (click)="Validate()">LOGIN</button>
+            <button class="btn" type="reset" (click)="onReset()">Cancel</button>
+        </div>
+        <div class="text-center">
+           <span style="font-weight: bold;">New User</span>
+           <a routerLink="/REGISTER-BUYER">Register buyer</a><br>
+           <a routerLink="/REGISTER-SELLER">Register seller</a>
+        </div>
+      </form>
+    </div>
+</div>
+</div>
+<footer class="footer">
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a routerLink="/HOME"> www.EMART.com</a>
+  </div>
+</footer>
+</div>
+  <router-outlet></router-outlet>

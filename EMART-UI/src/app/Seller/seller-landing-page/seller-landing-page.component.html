@@ -1,0 +1,33 @@
+<div class="bg-image">
+        <nav><div class="topnav">
+          <a><span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;SELLER DASHBOARD</span></a>
+          <a [routerLink]="'ADD ITEMS'">ADD ITEMS</a>
+    <a [routerLink]="'VIEW ITEMS'">VIEW ITEMS</a>
+    <!-- <a [routerLink]="'VIEW REPORTS'">REPORTS</a> -->
+    <a [routerLink]="'VIEW PROFILE'">VIEW PROFILE</a>
+    <div class="search-container">
+      <form>
+        <button type="submit" (click)="Logout()"><i class="fa fa-sign-out"></i>Logout</button>
+      </form>
+    </div>
+        </div></nav>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a routerLink="/SELLER"><i class="fa fa-home"></i> Dashboard</a>
+          <a [routerLink]="'ADD ITEMS'"><i class="fa fa-plus-square"></i> Add Items</a>
+      <a [routerLink]="'VIEW ITEMS'"><i class="fa fa-search"></i>View Items</a>
+      <a [routerLink]="'VIEW PROFILE'"><i class="fa fa-user"></i> View Profile</a>
+      <a routerLink="/CONTACT"><i class="fa fa-fw fa-envelope"></i>CONTACT</a>
+        </div>  
+      <footer class="footer">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a routerLink="/HOME"> www.EMART.com</a>
+        </div>
+      </footer>
+      <router-outlet></router-outlet>
+      </div>
+      
+      
+      
+
+    

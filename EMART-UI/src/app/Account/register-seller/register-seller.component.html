@@ -1,0 +1,93 @@
+<div class="bg-image">
+<nav><div class="topnav">
+    <a><span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;HOME</span></a>
+    <a routerLink="/HOME">EMART</a>
+  </div></nav>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a routerLink="/HOME"><i class="fa fa-fw fa-home"></i> EMART LOGIN</a>
+    <a routerLink="/CONTACT"><i class="fa fa-fw fa-envelope"></i>CONTACT</a>
+  </div>  
+<div class="register">
+    <h3 align="center">REGISTER SELLER</h3>
+        <form [formGroup]="sellerForm">
+            <table>
+                <tr>
+                    <td><label>UserName</label></td>
+                    <td><input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required"></div>
+                        <div *ngIf="f.username.errors.pattern"></div>
+                    </div></td>
+                </tr>
+                <tr>
+                    <td><label>Password</label></td>
+                    <td><input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required"></div>
+                        <div *ngIf="f.password.errors.pattern"></div>
+                    </div></td>
+                </tr>
+                <tr>
+                    <td><label>Company Name</label></td>
+                    <td><input type="text" formControlName="companyname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.companyname.errors }" />
+                    <div *ngIf="submitted && f.companyname.errors" class="invalid-feedback">
+                        <div *ngIf="f.companyname.errors.required"></div>
+                    </div></td>
+                </tr>
+                    <tr><td><label>GST</label></td>
+                <td><input type="text" formControlName="gst" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.gst.errors }" />
+                <div *ngIf="submitted && f.gst.errors" class="invalid-feedback">
+                    <div *ngIf="f.gst.errors.required"></div>
+                </div></td>
+            </tr>
+            <tr>
+                <td><label>About Company</label></td>
+                <td><input type="text" formControlName="aboutcmpy" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.aboutcmpy.errors }" />
+                <div *ngIf="submitted && f.aboutcmpy.errors" class="invalid-feedback">
+                    <div *ngIf="f.aboutcmpy.errors.required"></div>
+                </div></td>
+            </tr>
+            <tr>
+                <td><label>Address</label></td>
+                <td><input type="text" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+                <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                    <div *ngIf="f.address.errors.required"></div>
+                </div></td>
+            </tr>
+            <tr>
+                <td><label>Website</label></td>
+                <td><input type="text" formControlName="website" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.website.errors }" />
+                <div *ngIf="submitted && f.website.errors" class="invalid-feedback">
+                    <div *ngIf="f.website.errors.required"></div>
+                </div></td>
+            </tr>
+            <tr>
+                <td><label>Mobile</label></td>
+               <td><input type="text" formControlName="mobileno" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobileno.errors }" />
+                <div *ngIf="submitted && f.mobileno.errors" class="invalid-feedback">
+                    <div *ngIf="f.mobileno.errors.required"></div>
+                    <div *ngIf="f.mobileno.errors.pattern"></div>
+                </div></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required"></div>
+                    <div *ngIf="f.email.errors.email"></div>
+                </div>
+            </tr>
+                <div class="text-center">
+                <button class="btn btn-primary mr-1" type="submit" (click)='onSubmit()'>Register</button>
+                <button class="btn btn-primary mr-1" type="reset" (click)='onReset()'>Reset</button>
+            </div>
+        </table>
+        </form>
+</div>
+<footer class="footer">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a routerLink="/HOME"> www.EMART.com</a>
+    </div>
+  </footer>
+</div>

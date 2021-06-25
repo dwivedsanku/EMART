@@ -1,0 +1,72 @@
+<div class="register">
+    <h3 align="center">Add Category</h3>
+    <div class="form-row">
+        <form [formGroup]="categoryForm"  align="center">
+            <table>
+                 <tr>
+                    <td><label>Category Name</label></td>
+                    <td><input type="text" formControlName="cname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cname.errors }" />
+                    <div *ngIf="submitted && f.cname.errors" class="invalid-feedback">
+                        <div *ngIf="f.cname.errors.required"></div>
+                        <div *ngIf="f.cname.errors.pattern"></div>
+                    </div></td>
+                </tr> 
+               
+                <tr>
+                    <td><label>Category Details</label></td>
+                    <td><input type="text" formControlName="cdetails" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cdetails.errors }" />
+                    <div *ngIf="submitted && f.cdetails.errors" class="invalid-feedback">
+                        <div *ngIf="f.cdetails.errors.required"></div>
+                        <div *ngIf="f.cdetails.errors.pattern"></div>
+                    </div></td>
+                </tr>
+                <br>
+                <br>
+                    <div class="text-center">
+                    <button class="btn btn-primary mr-1" type="submit" (click)="onSubmitAdd()">Add</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="Category()">
+                        Delete
+                       </button>&nbsp;
+                    <!-- <button class="btn btn-primary mr-1" type="reset" (click)="onReset()">Reset</button> -->
+                </div>
+            </table>
+            </form>
+    </div>
+    </div>
+    <br>
+    
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content" style="width:120%;">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">List of Categories</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                 <table class="table table-striped">
+                   <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>CategoryName </th>
+                        <th>Details</th>
+                        <th>Delete</th>
+                      </tr>
+                 </thead>
+                 <tbody>
+                    <tr *ngFor="let category of list">
+                        <td>{{category.cid}}</td>
+                        <td>{{category.cname}}</td>
+                        <td>{{category.cdetails}}</td>
+                     <td><button type="button" class="btn btn-danger" (click)="Delete(category.cid)">Delete</button></td>
+                    </tr>
+                 </tbody>
+                 </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>

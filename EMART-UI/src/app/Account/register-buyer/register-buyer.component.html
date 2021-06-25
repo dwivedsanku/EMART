@@ -1,0 +1,73 @@
+<div class="bg-image">
+    <nav><div class="topnav">
+    <a><span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;HOME</span></a>
+    <a routerLink="/HOME">EMART</a>
+  </div></nav>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a routerLink="/HOME"><i class="fa fa-fw fa-home"></i> EMART LOGIN</a>
+    <a routerLink="/CONTACT"><i class="fa fa-fw fa-envelope"></i>CONTACT</a>
+  </div>  
+<div class="register">
+    <h3 align="center">REGISTER BUYER</h3>
+    <div class="jumborton">
+        <div class="container">
+        <form [formGroup]="buyerForm">
+            <table>
+                <tr>
+                    <td><label>UserName</label></td>
+                    <td><input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                        <div *ngIf="f.username.errors.required"></div>
+                        <div *ngIf="f.username.errors.pattern"></div>
+                    </div></td>
+                </tr>
+                <tr>
+                    <td><label>Password</label></td>
+                    <td><input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required"></div>
+                        <div *ngIf="f.password.errors.pattern">Password must be at least 8 characters and end with special character</div>
+                    </div></td>
+                </tr>
+                <tr>
+                    <td><label>Mobile</label></td>
+                    <td><input type="text" formControlName="mobileno" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobileno.errors }" />
+                <div *ngIf="submitted && f.mobileno.errors" class="invalid-feedback">
+                    <div *ngIf="f.mobileno.errors.required"></div>
+                    <div *ngIf="f.mobileno.errors.pattern"></div>
+                </div></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required"></div>
+                    <div *ngIf="f.email.errors.email"></div>
+                </div></td>
+            </tr>
+            <tr>
+                <td><label>Date</label></td>
+                <td><input type="Date" formControlName="datetime" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.datetime.errors }" />
+                    <div *ngIf="submitted && f.datetime.errors" class="invalid-feedback">
+                        <div *ngIf="f.datetime.errors.required"></div>
+                        <div *ngIf="f.datetime.errors.datetime"></div>
+                    </div></td>
+                </tr>
+                <div class="text-center">
+                <button class="btn btn-primary mr-1" type="submit" (click)='onSubmitBuyer()'>Register</button>
+            </div>
+        </table>
+        </form>
+</div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a routerLink="/HOME"> www.EMART.com</a>
+    </div>
+  </footer>
+</div>
+
+
+

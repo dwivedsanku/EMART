@@ -1,0 +1,33 @@
+<div class="bg-image">
+  <nav><div class="topnav">
+    <a><span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;EMART</span></a>
+    <a [routerLink]="'SEARCH ITEMS'">SEARCH</a>
+  <a [routerLink]="'PURCHASE-HISTORY'">PURCHASE HISTORY</a>
+  <a [routerLink]="'VIEW PROFILE-BUYER'">PROFILE</a>
+  <div class="search-container">
+    <form>
+      <button type="submit" (click)="Logout()"><i class="fa fa-sign-out"></i>Logout</button>
+    </form>
+  </div>
+  <div class="search-containers">
+      <form>
+        <button type="submit" [routerLink]="'VIEW CART'"><i class="fa fa-cart-arrow-down"></i></button>
+      </form>
+    </div>
+  </div></nav>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a routerLink="/BUYER"><i class="fa fa-home"></i> Dashboard</a>
+    <a [routerLink]="'SEARCH ITEMS'"><i class="fa fa-search"></i> Search</a>
+<a [routerLink]="'PURCHASE-HISTORY'"><i class="fa fa-history"></i>Purchase History</a>
+<a [routerLink]="'VIEW CART'"><i class="fa fa-cart-arrow-down"></i> View Cart</a>
+<a [routerLink]="'VIEW PROFILE-BUYER'"><i class="fa fa-user"></i> Profile</a>
+<a routerLink="/CONTACT"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+  </div> 
+<footer class="footer">
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a routerLink="/HOME"> www.EMART.com</a>
+  </div>
+</footer>
+<router-outlet></router-outlet>
+</div>

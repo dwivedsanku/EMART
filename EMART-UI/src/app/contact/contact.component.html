@@ -1,0 +1,59 @@
+<div class="bg-image">
+    <nav><div class="topnav">
+        <a><span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;EMART</span></a>
+      </div></nav>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a routerLink="/HOME"><i class="fa fa-home"></i> EMART LOGIN</a>
+      </div>  
+    <div class="register">
+        <h3 align="center">CONTACT US</h3>
+                          <form [formGroup]="contactform">
+                              <div class=form group>
+                                  <label class="control-label col-sm-2">Firstname:</label>
+                                  <input type="text" formControlName="fname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fname.errors }" />
+                                  <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+                                      <div *ngIf="f.fname.errors.required">Firstname is required</div>
+                                      <div *ngIf="f.fname.errors.pattern">Enter only Alphabets</div>
+                                  </div>
+                              </div>
+                              <div class=form group>
+                                  <label class="control-label col-sm-2">Lastname:</label>
+                                  <input type="text" formControlName="lname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lname.errors }" />
+                                  <div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+                                      <div *ngIf="f.lname.errors.required">LastName is required</div>
+                                      <div *ngIf="f.lname.errors.pattern">Enter Lastname</div>
+                                  </div>
+                  
+                              </div>
+                              <div class=form group>
+                                  <label class="control-label col-sm-2">Email:</label>
+                                  <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                      <div *ngIf="f.email.errors.required">Email is required</div>
+                                      <div *ngIf="f.email.errors.pattern">Enter Email</div>
+                                  </div>
+                  
+                              </div>
+                              <div class = form group>
+                                  <label class="control-label col-sm-2">Comments:</label>
+                                  <textarea type="text" formControlName="message"  rows="5" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.message.errors }" ></textarea>
+                                  <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+                                      <div *ngIf="f.message.errors.required">Give reason</div>
+                                  </div>
+                              </div>
+      <br/>
+      <br/>
+                              <div class=form group>        
+                                  <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+                                  </div>
+                                </div>
+                          </form>
+                      </div>
+                    </div>
+                    <footer class="footer">
+                        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                          <a routerLink="/HOME"> www.EMART.com</a>
+                        </div>
+                      </footer>

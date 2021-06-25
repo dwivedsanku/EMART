@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-06-24T18:42:21.9394256Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2021-06-24T18:42:49.8173615Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "33cde6b4-021e-42bf-b2a2-14536b19310c"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "tweetappaccountResourceGroup"
+    }
+  }
+}

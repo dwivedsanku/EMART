@@ -1,0 +1,21 @@
+<div class="view">    
+  <div class="container">
+         <div class=" table">
+          <div class="table-danger">
+              <table>
+             <tr>
+                 <th>Id</th>
+                 <th>Transactiontype</th>
+                 <th>Item Id</th>
+                 <th>Remarks</th>
+                 <th>Date</th>
+             </tr>
+             <tr *ngFor="let purchasehistory of list">  
+                  <td>{{purchasehistory.id}}</td>
+                  <td>{{purchasehistory.transactiontype}}</td>
+                  <td>{{purchasehistory.itemid}}</td>
+                  <td>{{purchasehistory.remarks}}</td>
+                  <td>{{purchasehistory.datetime|date:'MM-dd-yyyy'}}</td>
+             </tr>
+            </table>
+          </div>   

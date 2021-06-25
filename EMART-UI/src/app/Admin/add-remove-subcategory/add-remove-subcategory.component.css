@@ -1,0 +1,182 @@
+.topnav {
+    overflow: hidden;
+    background-color:transparent;
+    height: 60px;
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #8B008B;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .topnav a:hover {
+    background-color: transparent;
+    color: black;
+  }
+  
+  .topnav a.active {
+    color: white;
+  }
+  .topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  } 
+  .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:transparent;
+    color:#8B008B;
+    text-align: center;
+    height: auto;
+    font-weight: bold;
+  }
+   .bg-image{
+    background-image: url("src\assets\images\bgc.jpg");
+    background-color: #cccccc;
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-y: hidden;
+  }  
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#ddd;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color:#8B008B;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    background-color:transparent;
+    color: black;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  input[type=text]{
+    width: 80%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 30px;
+  }
+  .button1 {background-color: blue;
+    text-decoration-color: white;}
+    .register{
+        border-radius: 5px;
+        background-color:gray;
+        padding: 10px;
+        width: 30%;
+        box-align:center;
+        margin: 300px;
+        float: center;
+        margin-top: 50px ;
+    }
+    h3{
+      color:#8B008B;
+    }
+    .register{
+    background-image: url('src/assets/images/additems.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+    }
+    label{
+    color:#8B008B;
+    right: 20px;
+    }
+    .form{
+        text-align: center;
+    }
+    .tableform{
+      width:50%;
+      background-color:white;
+      margin: 300px;
+      margin-top: -150px
+    }

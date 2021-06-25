@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/33cde6b4-021e-42bf-b2a2-14536b19310c/resourceGroups/tweetappaccountResourceGroup/providers/Microsoft.Web/sites/emartsite",
+    "appService.deploySubpath": "dist\\EMART-UI"
+}
